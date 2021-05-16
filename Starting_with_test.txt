@@ -1,0 +1,4 @@
+ctrl + shift + p 
+select normal console application 
+name 
+start 
