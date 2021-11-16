@@ -18,12 +18,13 @@ Stream<int> countStream(int to) async* {
     yield i;
   }
 }
+
 Stream<int> timedCounter(Duration interval, [int maxCount]) async* {
   int i = 0;
   while (true) {
     await Future.delayed(interval);
     // yield i++;
-    var a  = DateTime.now().second;
+    var a = DateTime.now().second;
     yield DateTime.now().second;
     if (a == maxCount) break;
   }
@@ -32,17 +33,17 @@ Stream<int> timedCounter(Duration interval, [int maxCount]) async* {
 void listenAfterDelay() async {
   var counterStream = timedCounter(const Duration(seconds: 1), 15);
   await Future.delayed(const Duration(seconds: 5));
-// hello();
+// dartLanguagePrograms();
   // After 5 seconds, add a listener.
   await for (int n in counterStream) {
     print(n); // Print an integer every second, 15 times.
   }
-
 }
-Future<String> f ()async{
+
+Future<String> f() async {
   await Future.delayed(const Duration(seconds: 1));
-   DateTime.now().toString();
-   print(DateTime.now());
+  DateTime.now().toString();
+  print(DateTime.now());
 }
 
 // }
@@ -52,6 +53,4 @@ main() async {
   // var sum = await sumStream(stream);
   // print(sum); // 55
   // print(DateTime.now().weekday.toString());
-
 }
-

@@ -1,14 +1,14 @@
-hello( a){
+dartLanguagePrograms(a) {
   print(a);
   return a;
 }
-hello1(hey)
-{
-print("hello");
-print(hey);
+
+dartLanguagePrograms1(hey) {
+  print("dartLanguagePrograms");
+  print(hey);
 }
-void main()
-{
-  var f= hello(3);
-  hello1(f);
+
+void main() {
+  var f = dartLanguagePrograms(3);
+  dartLanguagePrograms1(f);
 }
