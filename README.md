@@ -1,2 +1,2 @@
 # dart
-![](RESOURCE.md)
+![RESOURCE.md](RESOURCE.md)
